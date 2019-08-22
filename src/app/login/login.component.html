@@ -1,6 +1,36 @@
-<h1 style="text-align:center">
-  Please log in to get started!
-</h1>
-<div class="login">
-  <h2 class="login-header">Log in</h2>
+
+<body>
+<!-- Top navigation -->
+<div class="topnav">
+  ​
+  <!-- Centered link -->
+  <div class="topnav-centered">
+    <a href="#home" class="active">KeepTime</a>
+  </div>
+  ​
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+    <a href="signup">Signup</a>
+  </div>
+
 </div>
+​
+<div>
+  <img src="./assets/img/Rectangle1.svg" alt="Rectangle" class="center">
+</div>
+​
+<div class="bg">
+  <form class="login">
+    <div class="container" >
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+      ​
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      ​
+      <button type="submit" (click)="loginUser()">Login</button>
+      <button type="submit" (click)="signingupUser()">Signup</button>
+    </div>
+  </form>
+</div>
+</body>

@@ -1,85 +1,114 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
-
-.login {
-  width: 400px;
-  margin: 16px auto;
-  font-size: 16px;
+body {
+  font-family: "Helvetica Neue";
+  color: #2699FB;
 }
-
-.login-header,
-.login p {
-  margin-top: 0;
-  margin-bottom: 0;
+​
+.topnav {
+  position: relative;
+  background-color: #2699FB;
+  overflow: hidden;
 }
-
-.login-triangle {
-  width: 0;
-  margin-right: auto;
-  margin-left: auto;
-  border: 12px solid transparent;
-  border-bottom-color: rgb(15, 66, 107);
-}
-
-.login-header {
-  background: rgb(12, 77, 129);
-  padding: 20px;
-  font-size: 1.4em;
-  font-weight: normal;
+​
+  /* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
   text-align: center;
-  text-transform: uppercase;
-  color: #fff;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-
-.login-container {
-  background: #ebebeb;
-  padding: 12px;
+​
+​
+  /* Centered section inside the top navigation */
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-.login p {
-  padding: 12px;
+​
+  /* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
 }
-
-.login input {
-  box-sizing: border-box;
+​
+​
+​
+.login {​margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+​
+​
+.center {
+  z-index: -1;
+  padding-top: 60px;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+  /* Full-width inputs */
+input[type=text], input[type=password] {
   width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  padding: 16px;
-  outline: 0;
-  font-family: inherit;
-  font-size: 0.95em;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #2699FB;
+  border-radius: 15px 50px 30px;
+  box-sizing: border-box;
 }
-
-.login input[type="email"],
-.login input[type="password"] {
-  background: #fff;
-  border-color: #bbb;
-  color: #555;
+​
+form.login {
+  position: absolute;
+  top: 170px;
+  right: 375px;
+  height: 100px;
 }
-
-.login input[type="email"]:focus,
-.login input[type="password"]:focus {
-  border-color: #888;
-}
-
-.login input[type="submit"] {
-  background: rgb(1, 29, 51);
-  border-color: transparent;
-  color: #fff;
+​
+  /* Set a style for all buttons */
+button {
+  background-color: #2699FB;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 15px 50px 30px;
   cursor: pointer;
+  width: 100%;
 }
-
-.login input[type="submit"]:hover {
-  background: #17c;
+​
+  /* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
 }
-
-.login input[type="submit"]:focus {
-  border-color: #05a;
+​
+​
+  /* Add padding to containers */
+.container {
+  padding: 16px;
 }
-.has-error input[type="email"],
-.has-error input[type="password"] {
-  border-color: rgb(216, 12, 12);
-  color: rgb(230, 14, 14);
+.bg{
+  background-image: url('//assets/img/Rectangle.svg');
+}
+​
+​
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  ​
+  form {
+    display: block;
+    float: none;
+  }
+  ​
+  img {
+    display: block;
+    float: none;
+  }
 }
