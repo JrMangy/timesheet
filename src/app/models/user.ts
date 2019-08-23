@@ -1,6 +1,8 @@
+import {Timesheet} from './timesheet';
+
 export interface User{
   username: string;
   password: string;
-  firstName: string;
-  lastName: string;
+  realName: string;
+  timesheet: Timesheet[];
 }

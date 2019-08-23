@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../models/user';
+import {UserService} from '../user.service';
+import {Timesheet} from '../models/timesheet';
 
 @Component({
   selector: 'app-timesheet',
@@ -7,17 +9,20 @@ import {User} from '../models/user';
   styleUrls: ['./timesheet.component.css']
 })
 export class TimesheetComponent implements OnInit {
-  private timeInHours: string;
-  private timeInMinutes: string;
-  private timeOutHours: string;
-  private timeOutMinutes: string;
-  private date: string;
-  constructor() { }
-
+  user: User = { username: '', password: '', realName: '', timesheet: []};
+  constructor(private userService: UserService) {}
   ngOnInit() {
   }
-  newTimesheet(){
-    console.log('new timesheet');
+  onSubmit() {
+    this.userService.createUser(this.user).subscribe(
+      value => {
+        console.log('[POST] create Customer successfully', value);
+      }, error => {
+        console.log('FAIL to create Customer!');
+      },
+      () => {
+        console.log('POST Customer - now completed.');
+      });
   }
-
 }
+
